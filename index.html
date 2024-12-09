@@ -1,61 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Random SWF Files</title>
-<style>
-body {
-    background-color: #f0f0f0;
-}
-
-.swf-container {
-    position: absolute;
-}
-</style>
-</head>
-<body>
-
-<script>
-    // Array of SWF file names
-    const swfFiles = [
-        "file1.swf",
-        "file2.swf",
-        "file3.swf",
-        "file4.swf",
-        "file5.swf",
-        "file6.swf",
-        "file7.swf",
-        "file8.swf",
-        "file9.swf",
-        "file10.swf",
-        "file11.swf",
-        "file12.swf",
-        "file13.swf",
-        "file14.swf",
-        "file15.swf"
-    ];
-
-    // Function to generate a random X position within the viewport
-    function getRandomX() {
-        return Math.floor(Math.random() * window.innerWidth);
+  <title>Glitchy Text</title>
+  <style>
+    .glitchy-text {
+      font-size: 36px;
+      font-weight: bold;
+      color: black;
+      animation: glitch 1s infinite;
     }
 
-    // Create SWF containers and set random X positions
-    swfFiles.forEach(file => {
-        const container = document.createElement('div');
-        container.classList.add('swf-container');
-        container.style.left = getRandomX() + 'px';
+    @keyframes glitch {
+      0% {
+        transform: translateX(0);
+      }
+      10% {
+        transform: translateX(-5px);
+      }
+      20% {
+        transform: translateX(5px);
+      }
+      30% {
+        transform: translateX(-2px);
+      }
+      40% {
+        transform: translateX(2px);
+      }
+      50% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="glitchy-text">Ivory owes SWF files, a debt incurred in the twilight of the digital age, when the ephemeral nature of online content clashed with the enduring allure of tangible artifacts. In a time when pixels danced across screens, ivory, a relic of a bygone era, found itself entangled in a complex web of technological obligations.
 
-        const embed = document.createElement('embed');
-        embed.src = file;
-        embed.width = '320';
-        embed.height = '240';
-        embed.type = 'application/x-shockwave-flash';
-        embed.pluginspage = 'http://www.adobe.com/go/getflashplayer';
+The SWF files, once the lifeblood of interactive web experiences, now lay dormant, their intricate code a testament to a forgotten era of innovation. As the digital landscape evolved, these files, like relics from a sunken ship, were cast aside, their significance diminished by the relentless march of progress.
 
-        container.appendChild(embed);
-        document.body.appendChild(container);
-    });
-</script>
+Yet, ivory, with its timeless beauty and historical weight, remained a symbol of opulence and power. Its very existence was a reminder of the delicate balance between human ingenuity and nature's bounty. As the world grappled with the ethical implications of its past, the debt owed to the SWF files became a poignant metaphor for the interconnectedness of time, technology, and tradition.
 
+The ivory, once prized for its use in intricate carvings and ornate jewelry, now bore the weight of its past. It was a silent witness to the rise and fall of empires, a symbol of both wealth and exploitation. The SWF files, on the other hand, were the offspring of a burgeoning digital age, a testament to human creativity and technological advancement.
+
+The debt, a curious juxtaposition of ancient and modern, was a reminder of the complex interplay between the past and the present. It was a debt that could not be repaid in mere currency, but rather in a profound acknowledgment of the interconnectedness of all things.
+
+As the world moved forward, the ivory and the SWF files remained intertwined, a testament to the enduring power of human ingenuity and the fragility of the natural world. The debt, a constant reminder of the past, served as a catalyst for reflection and a call to action. It was a debt that could only be repaid by honoring the past, embracing the present, and shaping a future that was both sustainable and equitable.</div>
 </body>
 </html>
