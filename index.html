@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Random SWF Files</title>
+<style>
+body {
+    background-color: #f0f0f0;
+}
+
+.swf-container {
+    position: absolute;
+}
+</style>
+</head>
+<body>
+
+<script>
+    // Array of SWF file names
+    const swfFiles = [
+        "file1.swf",
+        "file2.swf",
+        "file3.swf",
+        "file4.swf",
+        "file5.swf",
+        "file6.swf",
+        "file7.swf",
+        "file8.swf",
+        "file9.swf",
+        "file10.swf",
+        "file11.swf",
+        "file12.swf",
+        "file13.swf",
+        "file14.swf",
+        "file15.swf"
+    ];
+
+    // Function to generate a random X position within the viewport
+    function getRandomX() {
+        return Math.floor(Math.random() * window.innerWidth);
+    }
+
+    // Create SWF containers and set random X positions
+    swfFiles.forEach(file => {
+        const container = document.createElement('div');
+        container.classList.add('swf-container');
+        container.style.left = getRandomX() + 'px';
+
+        const embed = document.createElement('embed');
+        embed.src = file;
+        embed.width = '320';
+        embed.height = '240';
+        embed.type = 'application/x-shockwave-flash';
+        embed.pluginspage = 'http://www.adobe.com/go/getflashplayer';
+
+        container.appendChild(embed);
+        document.body.appendChild(container);
+    });
+</script>
+
+</body>
+</html>
